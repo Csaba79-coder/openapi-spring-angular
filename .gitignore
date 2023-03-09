@@ -89,3 +89,4 @@ bin/
 # Project exclude paths
 /backend/target/
 /openapi/target/
+/frontend/build/
