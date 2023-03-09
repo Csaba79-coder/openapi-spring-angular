@@ -1,0 +1,94 @@
+openapi: 3.0.3
+info:
+  title: FullStack project using API contract both in Spring & Angular
+  description: API Interface and Model for Full Stack project
+  version: 1.0.0
+  contact:
+    email: csabavadasz79@gmail.com
+servers:
+  - url: 'http://localhost:8080'
+tags:
+  - name: user
+
+paths:
+  /api/users:
+    post:
+      tags:
+        - user
+      summary: Add a new User
+      description: Add a new User to the database
+      operationId: addNewUser
+      requestBody:
+        description: Create a new User in the database
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewUserModel'
+        required: true
+      responses:
+        '201':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserModel'
+        '405':
+          description: Invalid input
+
+    get:
+      tags:
+        - user
+      summary: Render all Users
+      description: Render all Users from the database
+      operationId: renderAllUsers
+      x-interface-name: UserApi
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserModel'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: User not found
+        '405':
+          description: Validation exception
+
+components:
+  schemas:
+    UserModel:
+      type: object
+      properties:
+        id:
+          description: Id of the Representative
+          type: string
+          format: uuid
+          example: '3a8ea9f1-1a95-4caf-932f-2f988052933b'
+        name:
+          description: Name of the Representative entity
+          type: string
+          example: 'Vadász Csaba'
+        email:
+          description: Email of the Representative entity
+          type: string
+          example: 'csabavadasz79@gmail.com'
+
+    NewUserModel:
+      type: object
+      properties:
+        name:
+          description: Name of the Representative entity
+          type: string
+          example: 'Vadász Csaba'
+        email:
+          description: Email of the Representative entity
+          type: string
+          example: 'csabavadasz79@gmail.com'
