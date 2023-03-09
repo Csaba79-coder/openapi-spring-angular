@@ -2,10 +2,10 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
+    "generate:api": "openapi-generator generate -g typescript-angular -i ../openapi/api-contract.yaml -o ./build/openapi",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "generate:api": "openapi-generator generate -g typescript-angular -i ../openapi/api-contract.yaml -o ./build/openapi",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

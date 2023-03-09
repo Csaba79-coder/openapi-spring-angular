@@ -6,8 +6,15 @@ npm add @openapitools/openapi-generator-cli
 
 == Second step
 
-add this line to scripts in package.json
+add this line to scripts in package.json (it must be the first line in scripts)
 
-"generate:api": "openapi-generator generate -g typescript-angular -i ../openapi/api-contract.yaml -o ./build/openapi",
+"generate:api": "openapi-generator generate -g typescript-angular -i ../openapi/src/main/resources/api-contract.yaml -o ./build/openapi",
 
 This script generates the code inside the frontend/build/openapi folder
+
+'''
+
+Make sure to add this folder with generated code to your .gitignore file and exclude it from code coverage & analysis tools.
+
+'''
+
