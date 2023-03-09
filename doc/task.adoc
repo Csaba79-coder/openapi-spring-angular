@@ -1,0 +1,8 @@
+= Manual for implementing API contract in Frontend module
+
+== First step
+
+npm add @openapitools/openapi-generator-cli
+
+== Second step
+
