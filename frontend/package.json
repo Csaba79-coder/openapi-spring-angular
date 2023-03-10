@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "generate:api": "openapi-generator-cli generate -g typescript-angular -i C:\\Users\\Computer\\Documents\\Java\\Progmatic\\openapi-spring-angular\\openapi\\src\\main\\resources\\api-contract.yaml -o ./build/openapi",
+    "generate:api": "openapi-generator-cli generate -g typescript-angular -i ./../openapi/src/main/resources/api-contract.yaml -o ./build/openapi",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

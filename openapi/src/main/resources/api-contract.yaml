@@ -92,3 +92,6 @@ components:
           description: Email of the Representative entity
           type: string
           example: 'csabavadasz79@gmail.com'
+      required:
+        - name
+        - email
