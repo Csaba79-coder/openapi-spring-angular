@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import {ApiModule} from "../../build/openapi";
+import {ApiModule, UserService} from "../../build/openapi";
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import {ApiModule} from "../../build/openapi";
     HttpClientModule,
     ApiModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,12 +6,14 @@ import com.csaba79coder.model.UserModel;
 import com.csaba79coder.openapispringangular.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin("http://localhost:4200")
 public class UserController implements UserApi {
 
     private final UserService userService;

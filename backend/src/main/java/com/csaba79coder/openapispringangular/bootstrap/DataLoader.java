@@ -18,5 +18,6 @@ public class DataLoader implements ApplicationRunner {
         User user = new User();
         user.setEmail("csabavadasz79@gmail.com");
         user.setName("Csaba Vadasz");
+        userRepository.save(user);
     }
 }
