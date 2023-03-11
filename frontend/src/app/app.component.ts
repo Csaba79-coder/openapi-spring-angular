@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {UserModel} from "../../build/openapi";
 
 @Component({
   selector: 'app-root',
